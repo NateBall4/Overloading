@@ -32,10 +32,17 @@ public:
 	double GetMagnitude();
 
 	// OPERATIONS 
-	Vector AddVector(Vector addMe);
-	Vector SubtractVector(Vector subtractMe);
+	Vector operator+(Vector addMe);
+	Vector operator-(Vector subtractMe);
+
+	// overloading the stream output and input operators is a little different
+	friend ostream& operator<<(ostream& outputStream, Vector& theVector) {
+		outputStream << "<" << theVector._v_x << ", " << theVector._v_y << ">";
+		return outputStream;
+	}
 
 	// DISPLAY METHODS 
 	void Display();
 };
 #endif
+
