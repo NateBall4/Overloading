@@ -37,7 +37,7 @@ double Vector::GetMagnitude() {
 }
 
 // operations 
-Vector Vector::AddVector(Vector addMe) { 
+Vector Vector::operator+(Vector addMe) { 
 	// create a temp vector 
 	Vector returnMe; 
 	// add corresponding vector components 
@@ -47,7 +47,7 @@ Vector Vector::AddVector(Vector addMe) {
 	return returnMe; 
 } 
 
-Vector Vector::SubtractVector(Vector subtractMe) { 
+Vector Vector::operator-(Vector subtractMe) { 
 	// create a tempVector 
 		Vector returnMe;
 	// subtract corresponding vector components
@@ -61,4 +61,3 @@ Vector Vector::SubtractVector(Vector subtractMe) {
 void Vector::Display() {
 	cout << "<" << this->_v_x << ", " << this->_v_y << ">"; 
 }
-
